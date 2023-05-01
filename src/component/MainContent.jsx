@@ -18,8 +18,15 @@ import NESTJS_LOGO from "../assets/nestjs.svg";
 
 const MainContent = () => {
   return (
-    <Box sx={{ backgroundColor: "#F9F9F9", py: 8 }}>
-      <Container sx={{ height: "75vh" }}>
+    <Box
+      sx={{
+        backgroundImage:
+          //   "background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
+          " linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);",
+        py: 8,
+      }}
+    >
+      <Container sx={{ height: "100vh" }}>
         <Grid container alignItems="center" mt={5} columnSpacing={2}>
           <Grid item xs={12} md={7} xl={7} p={15}>
             <Box>
@@ -123,12 +130,16 @@ const MainContent = () => {
             >
               <img
                 src={TYPESCRIPT_LOGO}
-                className="logo java-script"
+                className="logo type-script"
                 alt="html logo"
               />
-              <img src={NODEJS_LOGO} className="logo nestjs" alt="html logo" />
+              <img src={NODEJS_LOGO} className="logo nodejs" alt="html logo" />
               <img src={NESTJS_LOGO} className="logo nestjs" alt="html logo" />
-              <img src={EXPRESS_LOGO} className="logo nodejs" alt="html logo" />
+              <img
+                src={EXPRESS_LOGO}
+                className="logo expressjs"
+                alt="html logo"
+              />
             </Grid>
           </Grid>
         </Grid>

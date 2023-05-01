@@ -34,3 +34,9 @@
 .logo.nestjs:hover {
   filter: drop-shadow(0 0 2em #e0234e);
 }
+.logo.expressjs:hover {
+  filter: drop-shadow(0 0 2em hsla(226, 90%, 8%, 0.958));
+}
+.logo.type-script:hover {
+  filter: drop-shadow(0 0 2em hsla(225, 91%, 39%, 0.958));
+}
