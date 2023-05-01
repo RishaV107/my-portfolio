@@ -1,9 +1,14 @@
 import "./App.css";
+import About from "./component/About";
+import Header from "./component/Header";
+import MainContent from "./component/MainContent";
 
 function App() {
   return (
     <>
-      <h1>Rishav Singh</h1>
+      <Header />
+      <MainContent />
+      <About />
     </>
   );
 }

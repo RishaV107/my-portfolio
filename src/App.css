@@ -1,0 +1,36 @@
+.logo {
+  height: 6.5em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.html:hover {
+  filter: drop-shadow(0 0 2em #e44d26);
+}
+.logo.css:hover {
+  filter: drop-shadow(0 0 2em #264de4);
+}
+.logo.java-script:hover {
+  filter: drop-shadow(0 0 2em #f7df1e);
+}
+.logo.type-script.react:hover {
+  filter: drop-shadow(0 0 2em #de4313);
+}
+.logo.c:hover {
+  filter: drop-shadow(0 0 2em #de4313);
+}
+.logo.c-plus-plus:hover {
+  filter: drop-shadow(0 0 2em #de4313);
+}
+.logo.c-plus-plus:hover {
+  filter: drop-shadow(0 0 2em #0a95a4a3);
+}
+.logo.nodejs:hover {
+  filter: drop-shadow(0 0 2em #448a3f);
+}
+.logo.nestjs:hover {
+  filter: drop-shadow(0 0 2em #e0234e);
+}
