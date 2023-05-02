@@ -8,7 +8,7 @@ const About = () => {
     loop: true,
   });
   return (
-    <Box sx={{ backgroundColor: "#ffffff" }} mt={5}>
+    <Box sx={{ backgroundColor: "#ffffff" }} pt={5}>
       <Container sx={{ height: "55vh" }}>
         <Grid
           container
@@ -26,12 +26,12 @@ const About = () => {
               About Me
             </Typography>
           </Grid>
-          <Grid item container direction="row" columnSpacing={5}>
+          <Grid item container direction="row" columnSpacing={1}>
             <Grid item xs={12} md={5} xl={5}>
               {View}
             </Grid>
             <Grid item xs={12} md={7} xl={7}>
-              <Box mt={10}>
+              <Box pt={15}>
                 <Typography variant="h6" component="div" sx={{ mb: 4 }}>
                   I am a Software Engineer having 2+ years of full-stack
                   development experience and am skilled in web technologies such
