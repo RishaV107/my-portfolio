@@ -6,6 +6,8 @@ import {
   StepLabel,
   StepContent,
 } from "@mui/material";
+import Working from "../assets/lotties/Working.json";
+import { useLottie } from "lottie-react";
 
 const steps = [
   {
@@ -32,6 +34,10 @@ const steps = [
 ];
 
 const Experience = () => {
+  const { View } = useLottie({
+    animationData: Working,
+    loop: true,
+  });
   return (
     <Grid
       container
@@ -40,6 +46,7 @@ const Experience = () => {
       direction="column"
       sx={{
         backgroundImage: "linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)",
+        // backgroundImage: " linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
       }}
       pb={5}
     >
@@ -50,33 +57,50 @@ const Experience = () => {
       </Grid>
 
       <Grid
+        container
         item
         xs={12}
-        sx={{ display: "flex", justifyContent: "center" }}
-        pt={5}
+        sm={12}
+        md={12}
+        xl={12}
+        sx={{ display: "flex", justifyContent: "center", flexDirection: "row" }}
+        // pt={5}
         pl={{ xs: 2, sm: 5, md: 30, xl: 50 }}
         pr={{ xs: 2, sm: 5, md: 30, xl: 50 }}
       >
-        <Stepper orientation="vertical">
-          {steps.map((step, index) => (
-            <Step key={index} active={true}>
-              <StepLabel>
-                <Typography variant="caption" color="text.secondary">
-                  {step.position}
-                </Typography>
-              </StepLabel>
-              <StepContent>
-                <Typography variant="body2" color="text.secondary" gutterBottom>
-                  {step.companyName}
-                </Typography>
-                <Typography variant="body2" color="text.secondary" gutterBottom>
-                  {step.workDuration}
-                </Typography>
-                <Typography>{step.description}</Typography>
-              </StepContent>
-            </Step>
-          ))}
-        </Stepper>
+        <Grid item xs={12} sm={7} md={7} xl={7}>
+          <Stepper orientation="vertical">
+            {steps.map((step, index) => (
+              <Step key={index} active={true}>
+                <StepLabel>
+                  <Typography variant="caption" color="text.secondary">
+                    {step.position}
+                  </Typography>
+                </StepLabel>
+                <StepContent>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    {step.companyName}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    {step.workDuration}
+                  </Typography>
+                  <Typography>{step.description}</Typography>
+                </StepContent>
+              </Step>
+            ))}
+          </Stepper>
+        </Grid>
+        <Grid item xs={12} sm={5} md={5} xl={5}>
+          {View}
+        </Grid>
       </Grid>
     </Grid>
   );
