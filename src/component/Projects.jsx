@@ -13,47 +13,37 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const Projects = () => {
   const projects = [
     {
-      name: "Project 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      githubLink: "https://github.com/project1",
+      name: "Bike Service Portal",
+      description:
+        "This is a web application built using React, designed to provide a platform for bike owners to schedule and manage their bike service appointments conveniently",
+      githubLink: "https://github.com/RishaV107/Bike-Service-Portal",
       projectImage:
         "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     },
     {
-      name: "Project 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      githubLink: "https://github.com/project2",
+      name: "Synapsis",
+      description:
+        "It is basically a website through which You can get information about various types of surgeries and get the contact no of the specialized doctor in that surgery. ",
+      githubLink: "https://github.com/RishaV107/Synapsis",
       projectImage:
         "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     },
     {
-      name: "Project 3",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      githubLink: "https://github.com/project3",
+      name: "GitHub-Finder",
+      description:
+        "This is the simple react app implemented with the GitHub API to fetch the details of the users.",
+      githubLink: "https://github.com/RishaV107/GitHub-Finder",
       projectImage:
         "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     },
-    // {
-    //   name: "Project 4",
-    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    //   githubLink: "https://github.com/project3",
-    //   projectImage:
-    //     "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    // },
-    // {
-    //   name: "Project 4",
-    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    //   githubLink: "https://github.com/project3",
-    //   projectImage:
-    //     "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    // },
-    // {
-    //   name: "Project 6",
-    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    //   githubLink: "https://github.com/project3",
-    //   projectImage:
-    //     "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    // },
+    {
+      name: "Bubble Animate",
+      description:
+        "A simple canvas based JavaScript app to animate the bubble on to the screen",
+      githubLink: "https://github.com/RishaV107/BubbleAnimate",
+      projectImage:
+        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    },
   ];
 
   return (
@@ -63,6 +53,8 @@ const Projects = () => {
         backgroundImage: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
         py: 8,
       }}
+      pl={2}
+      pr={2}
     >
       <Grid container spacing={4} justifyContent="center" alignItems="center">
         <Grid
@@ -107,7 +99,7 @@ const Projects = () => {
               xs={6}
               sm={6}
               md={4}
-              xl={4}
+              xl={2}
               sx={{
                 display: "flex",
                 justifyContent: "center",
@@ -115,18 +107,32 @@ const Projects = () => {
               }}
             >
               <Card elevation={15}>
-                <CardMedia sx={{ height: 140 }} image={project.projectImage} />
+                <CardMedia
+                  sx={{ height: "8em" }}
+                  image={project.projectImage}
+                />
                 <CardContent>
                   <Typography variant="h6" component="h3">
                     {project.name}
                   </Typography>
-                  <Typography variant="body1" component="p">
+                  <Typography
+                    variant="body2"
+                    component="p"
+                    sx={{
+                      overflow: "scroll",
+                    }}
+                    maxHeight={140}
+                  >
                     {project.description}
                   </Typography>
                   <Link
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
+                    sx={{
+                      display: "flex",
+                      alignItems: "flex-end",
+                    }}
                   >
                     <IconButton>
                       <GitHubIcon />

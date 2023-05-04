@@ -77,6 +77,7 @@ const Education = () => {
                 <Typography variant="body1" component="div">
                   Education Duration: 2013 - 2014
                 </Typography>
+                <Divider />
               </Grid>
             </Grid>
           </Grid>
