@@ -45,8 +45,8 @@ const Experience = () => {
       alignItems="center"
       direction="column"
       sx={{
-        backgroundImage: "linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)",
-        // backgroundImage: " linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+        // backgroundImage: "linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)",
+        backgroundImage: " linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
       }}
       pb={5}
     >

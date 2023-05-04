@@ -33,34 +33,34 @@ const Projects = () => {
       projectImage:
         "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
     },
-    {
-      name: "Project 4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      githubLink: "https://github.com/project3",
-      projectImage:
-        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    },
-    {
-      name: "Project 4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      githubLink: "https://github.com/project3",
-      projectImage:
-        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    },
-    {
-      name: "Project 6",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      githubLink: "https://github.com/project3",
-      projectImage:
-        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    },
+    // {
+    //   name: "Project 4",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    //   githubLink: "https://github.com/project3",
+    //   projectImage:
+    //     "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    // },
+    // {
+    //   name: "Project 4",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    //   githubLink: "https://github.com/project3",
+    //   projectImage:
+    //     "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    // },
+    // {
+    //   name: "Project 6",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    //   githubLink: "https://github.com/project3",
+    //   projectImage:
+    //     "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+    // },
   ];
 
   return (
     <Box
       sx={{
-        backgroundImage: "linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)",
-        // backgroundImage: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+        // backgroundImage: "linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)",
+        backgroundImage: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
         py: 8,
       }}
     >

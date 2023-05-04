@@ -28,8 +28,8 @@ const MainContent = () => {
       alignItems="center"
       pt={5}
       sx={{
-        backgroundImage: "linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)",
-        // backgroundImage: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
+        // backgroundImage: "linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)",
+        backgroundImage: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
         height: { xs: "110vh", md: "95vh" },
       }}
     >
@@ -75,7 +75,7 @@ const MainContent = () => {
                 1000,
                 "I am a Coder",
                 1000,
-                "I am a Computer Engineer",
+                "I am a Learner",
                 1000,
               ]}
               speed={50}
