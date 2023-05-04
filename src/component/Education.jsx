@@ -18,7 +18,12 @@ const Education = () => {
           alignContent="center"
         >
           <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
-            <Typography variant="h4" component="h2" gutterBottom>
+            <Typography
+              variant="h2"
+              component="h2"
+              fontSize={50}
+              fontWeight="bold"
+            >
               Education
             </Typography>
           </Grid>
@@ -35,7 +40,7 @@ const Education = () => {
             <Grid item xs={12} sm={12} md={6} xl={6}>
               {View}
             </Grid>
-            <Grid direction="column" sm={12} md={6} xl={6}>
+            <Grid container item direction="column" sm={12} md={6} xl={6}>
               <Grid item xs={12} md={4} pt={5}>
                 <Typography variant="h6" component="h3" gutterBottom>
                   B.Tech | CSE

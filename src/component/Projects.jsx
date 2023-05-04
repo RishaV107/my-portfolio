@@ -77,8 +77,13 @@ const Projects = () => {
             alignItems: "center",
           }}
         >
-          <Typography variant="h4" component="h2" gutterBottom>
-            Projects
+          <Typography
+            variant="h2"
+            component="h2"
+            fontSize={50}
+            fontWeight="bold"
+          >
+            Project
           </Typography>
         </Grid>
         <Grid

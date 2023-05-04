@@ -87,10 +87,10 @@ const MainContent = () => {
             Feel free to contact me for any collaboration or project inquiries.
           </Typography>
           <IconButton color="#000000" size="large">
-            <GitHubIcon fontSize="inherit" />
+            <GitHubIcon fontSize="large" />
           </IconButton>
           <IconButton color="#000000" size="large">
-            <LinkedInIcon fontSize="inherit" />
+            <LinkedInIcon fontSize="large" />
           </IconButton>
         </Box>
       </Grid>
