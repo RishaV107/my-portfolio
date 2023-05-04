@@ -1,12 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import {
-  Typography,
-  Grid,
-  Box,
-  Card,
-  CardMedia,
-  IconButton,
-} from "@mui/material";
+import { Typography, Grid, Box, Card, CardMedia, Link } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import HTML_LOGO from "../assets/svg/html-5.svg";
@@ -21,6 +14,8 @@ import MYSQL_LOGO from "../assets/svg/mysql.svg";
 import { TypeAnimation } from "react-type-animation";
 
 const MainContent = () => {
+  const linkedInLink = "https://www.linkedin.com/in/rishav-singh-2b0277158/";
+  const githubLink = "https://github.com/RishaV107";
   return (
     <Grid
       container
@@ -30,7 +25,7 @@ const MainContent = () => {
       sx={{
         // backgroundImage: "linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)",
         backgroundImage: "linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%)",
-        height: { xs: "110vh", md: "95vh" },
+        height: { xs: "140vh", sm: "150vh", md: "95vh", xl: "95vh" },
       }}
     >
       <Grid
@@ -51,18 +46,17 @@ const MainContent = () => {
             variant="h2"
             component="h2"
             sx={{
-              fontSize: { xs: "45px", md: "65px", xl: "65px" },
+              fontSize: { xs: "3em", md: "3.5em", xl: "4.5em" },
               fontWeight: "bold",
             }}
           >
             Rishav Singh
           </Typography>
-
           <Typography
             variant="h4"
             component="div"
             sx={{
-              fontSize: { xs: "14px", md: "20px", xl: "20px" },
+              fontSize: { xs: "0.8em", sm: "1em", md: "1.2em", xl: "1.2em" },
               fontWeight: "bold",
             }}
           >
@@ -86,12 +80,12 @@ const MainContent = () => {
           <Typography variant="body1" component="div">
             Feel free to contact me for any collaboration or project inquiries.
           </Typography>
-          <IconButton color="#000000" size="large">
-            <GitHubIcon fontSize="large" />
-          </IconButton>
-          <IconButton color="#000000" size="large">
-            <LinkedInIcon fontSize="large" />
-          </IconButton>
+          <Link href={githubLink} target="_blank" rel="" color="#FFFFFF">
+            <GitHubIcon fontSize="large" sx={{ color: "#000000" }} />
+          </Link>{" "}
+          <Link href={linkedInLink} target="blank" rel="">
+            <LinkedInIcon fontSize="large" color="primary" />
+          </Link>
         </Box>
       </Grid>
       <Grid
@@ -99,7 +93,7 @@ const MainContent = () => {
         xs={12}
         md={6}
         xl={6}
-        order={{ xs: 1, md: 2, xl: 2 }}
+        order={{ xs: 1, sm: 1, md: 2, xl: 2 }}
         pl={{ xs: 2 }}
         pr={{ xs: 2 }}
         sx={{ display: "flex", justifyContent: "center" }}
@@ -125,6 +119,7 @@ const MainContent = () => {
         item
         container
         xs={12}
+        sm={12}
         md={12}
         xl={12}
         sx={{
@@ -134,7 +129,7 @@ const MainContent = () => {
         }}
         pt={{ xs: 2 }}
         pb={5}
-        order={{ xs: 3, md: 3, xl: 3 }}
+        order={{ xs: 3, sm: 3, md: 3, xl: 3 }}
       >
         <Grid item xs={12} md={12} xl={12}>
           <Typography variant="h4">Tech Stack </Typography>
@@ -144,18 +139,21 @@ const MainContent = () => {
           <Grid
             item
             xs={12}
+            sm={12}
             md={6}
             xl={6}
             sx={{
               display: "flex",
               justifyContent: {
                 xs: "center",
+                sm: "center",
                 md: "flex-end",
                 xl: "flex-end",
               },
             }}
           >
             <img src={HTML_LOGO} className="logo html" alt="html logo" />
+
             <img src={CSS_LOGO} className="logo css" alt="html logo" />
             <img
               src={JAVASCRIPT_LOGO}
@@ -167,6 +165,7 @@ const MainContent = () => {
           <Grid
             item
             xs={12}
+            sm={12}
             md={6}
             xl={6}
             sx={{

@@ -6,6 +6,9 @@ const About = () => {
   const { View } = useLottie({
     animationData: DeveloperMeditation,
     loop: true,
+    style: {
+      height: "60vh",
+    },
   });
   return (
     <Grid
@@ -16,7 +19,12 @@ const About = () => {
       sx={{ backgroundColor: "#ffffff" }}
     >
       <Grid item pt={{ xs: 2, md: 5, xl: 5 }}>
-        <Typography variant="h2" component="h2" fontSize={50} fontWeight="bold">
+        <Typography
+          variant="h2"
+          component="h2"
+          fontSize="3em"
+          fontWeight="bold"
+        >
           About Me
         </Typography>
       </Grid>
@@ -29,9 +37,9 @@ const About = () => {
           xs={12}
           md={7}
           xl={7}
-          pt={{ xs: 1, sm: 1, md: 20, xl: 25 }}
-          pl={{ xs: 2, sm: 2, md: 5, xl: 5 }}
-          pr={{ xs: 2, sm: 2, md: 5, xl: 5 }}
+          pt={{ xs: 1, sm: 1, md: 20, xl: 15 }}
+          pl={{ xs: 2, sm: 2, md: 5, xl: 1 }}
+          pr={{ xs: 2, sm: 2, md: 5, xl: 45 }}
         >
           <Box>
             <Typography variant="h6" component="div" sx={{ mb: 4 }}>

@@ -29,7 +29,7 @@ const steps = [
     position: "Internship",
     workDuration: "August 2020 - December 2020",
     description:
-      "Worked on the development of a robust web-based game having high scalability. Implementation of REST APIs. Participated in architecture, design, and implementation of game features using Typescript, PixiJS, and PhasorJs.",
+      "Worked as a web developer and was responsible for creating new pages and updating it.",
   },
 ];
 
@@ -51,7 +51,12 @@ const Experience = () => {
       pb={5}
     >
       <Grid item pt={{ xs: 2, md: 5, xl: 5 }}>
-        <Typography variant="h2" component="h2" fontSize={50} fontWeight="bold">
+        <Typography
+          variant="h2"
+          component="h2"
+          fontSize="3em"
+          fontWeight="bold"
+        >
           My Experiences
         </Typography>
       </Grid>
@@ -64,11 +69,19 @@ const Experience = () => {
         md={12}
         xl={12}
         sx={{ display: "flex", justifyContent: "center", flexDirection: "row" }}
-        // pt={5}
+        pt={10}
         pl={{ xs: 2, sm: 5, md: 30, xl: 50 }}
         pr={{ xs: 2, sm: 5, md: 30, xl: 50 }}
       >
-        <Grid item xs={12} sm={7} md={7} xl={7}>
+        <Grid
+          item
+          xs={12}
+          sm={7}
+          md={7}
+          xl={7}
+          pt={{ xs: 4, xm: 4 }}
+          order={{ xs: 2, sm: 2 }}
+        >
           <Stepper orientation="vertical">
             {steps.map((step, index) => (
               <Step key={index} active={true}>
@@ -98,7 +111,14 @@ const Experience = () => {
             ))}
           </Stepper>
         </Grid>
-        <Grid item xs={12} sm={5} md={5} xl={5}>
+        <Grid
+          item
+          xs={12}
+          sm={5}
+          md={5}
+          xl={5}
+          order={{ xs: 1, sm: 1, md: 2, xl: 2 }}
+        >
           {View}
         </Grid>
       </Grid>

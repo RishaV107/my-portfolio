@@ -80,7 +80,7 @@ const Projects = () => {
           <Typography
             variant="h2"
             component="h2"
-            fontSize={50}
+            fontSize="3em"
             fontWeight="bold"
           >
             Project

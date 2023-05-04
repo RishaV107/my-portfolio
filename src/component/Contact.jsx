@@ -24,7 +24,7 @@ const Contact = () => {
           <Typography
             variant="h2"
             component="h2"
-            fontSize={40}
+            fontSize="3em"
             fontWeight="bold"
           >
             Contact
@@ -36,7 +36,7 @@ const Contact = () => {
               <Typography
                 variant="h4"
                 component="h4"
-                fontSize={{ xs: 30, sm: 30, md: 40, xl: 40 }}
+                fontSize={{ xs: "1.8em", sm: "2em", md: "2.5em", xl: "2.5em" }}
               >
                 Dont be shy! Hit me up! 👇🏻
               </Typography>
