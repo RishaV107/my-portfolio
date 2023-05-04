@@ -9,6 +9,9 @@ import {
   CardMedia,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import BubbleAnimationImage from "../assets/images/BubbleAnimation.png";
+import GitHubFinderImage from "../assets/images/GitHubFinder.png";
+import BikeServicePortalImage from "../assets/images/BikeServicePortal.png";
 
 const Projects = () => {
   const projects = [
@@ -17,8 +20,7 @@ const Projects = () => {
       description:
         "This is a web application built using React, designed to provide a platform for bike owners to schedule and manage their bike service appointments conveniently",
       githubLink: "https://github.com/RishaV107/Bike-Service-Portal",
-      projectImage:
-        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      projectImage: BikeServicePortalImage,
     },
     {
       name: "Synapsis",
@@ -33,16 +35,14 @@ const Projects = () => {
       description:
         "This is the simple react app implemented with the GitHub API to fetch the details of the users.",
       githubLink: "https://github.com/RishaV107/GitHub-Finder",
-      projectImage:
-        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      projectImage: GitHubFinderImage,
     },
     {
       name: "Bubble Animate",
       description:
         "A simple canvas based JavaScript app to animate the bubble on to the screen",
       githubLink: "https://github.com/RishaV107/BubbleAnimate",
-      projectImage:
-        "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      projectImage: BubbleAnimationImage,
     },
   ];
 
