@@ -83,7 +83,7 @@ const Projects = () => {
             fontSize="3em"
             fontWeight="bold"
           >
-            Project
+            Projects
           </Typography>
         </Grid>
         <Grid

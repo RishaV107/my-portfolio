@@ -6,6 +6,8 @@ const Footer = () => {
   const linkedInLink = "https://www.linkedin.com/in/rishav-singh-2b0277158/";
   const githubLink = "https://github.com/RishaV107";
 
+  const date = new Date();
+
   return (
     <footer style={{ backgroundColor: "#2D2E32", padding: "24px 0" }}>
       <Container>
@@ -34,7 +36,7 @@ const Footer = () => {
           color="#FFFFFF"
           sx={{ fontSize: "17px" }}
         >
-          &copy; 2023. All rights reserved.
+          &copy; {date.getFullYear()}. All rights reserved.
         </Typography>
       </Container>
     </footer>

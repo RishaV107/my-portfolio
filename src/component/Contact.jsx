@@ -1,9 +1,10 @@
-import { Typography, Grid, Icon } from "@mui/material";
+import { Typography, Grid, Link } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
 const Contact = () => {
   const email = "rishavsingh107@gmail.com";
+  const twitter = "https://twitter.com/RishavS107";
 
   // const { View } = useLottie({
   //   animationData: EmailMe,
@@ -43,27 +44,49 @@ const Contact = () => {
             </Grid>
 
             <Grid container item pl={{ xs: 2, sm: 5, xl: 19 }}>
-              <Grid container item pt={2} xs={12}>
+              <Grid container item pt={2}>
                 <Grid item>
-                  <Icon fontSize="large">
-                    <EmailIcon />
-                  </Icon>
-                </Grid>
-                <Grid item>
-                  <Typography pt={1.2} variant="h5">
-                    {email}
+                  <Typography variant="h5">
+                    <Link
+                      href={`mailto:${email}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="#000000"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        textDecoration: "none",
+                      }}
+                    >
+                      <EmailIcon
+                        fontSize="large"
+                        style={{ marginRight: "5px" }}
+                      />
+                      {email}
+                    </Link>
                   </Typography>
                 </Grid>
               </Grid>
-              <Grid container item pt={2} xs={12}>
+              <Grid item pt={2}>
                 <Grid item>
-                  <Icon fontSize="large">
-                    <TwitterIcon />
-                  </Icon>
-                </Grid>
-                <Grid>
-                  <Typography pt={1.2} variant="h5">
-                    {"RishaV107"}
+                  <Typography variant="h5">
+                    <Link
+                      href={twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      color="#000000"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        textDecoration: "none",
+                      }}
+                    >
+                      <TwitterIcon
+                        fontSize="large"
+                        style={{ marginRight: "5px" }}
+                      />
+                      {"RishavS107"}
+                    </Link>
                   </Typography>
                 </Grid>
               </Grid>
