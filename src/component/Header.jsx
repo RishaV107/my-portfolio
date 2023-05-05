@@ -21,6 +21,7 @@ import WorkIcon from "@mui/icons-material/Work";
 import SchoolIcon from "@mui/icons-material/School";
 import CodeIcon from "@mui/icons-material/Code";
 import MailIcon from "@mui/icons-material/Mail";
+import RISHAV_LOGO from "../assets/svg/New-RS-LOGO.svg";
 
 const Header = () => {
   const theme = useTheme();
@@ -92,10 +93,12 @@ const Header = () => {
         <Typography
           variant="h6"
           component="div"
-          sx={{ flexGrow: 1, color: "black", fontFamily: "" }}
+          sx={{ flexGrow: 1, color: "black" }}
         >
-          {/* <img src="/logo.png" alt="Logo" style={{ height: 40 }} /> */}
-          RISHAV.DEV
+          <Box sx={{ display: "flex" }}>
+            <img src={RISHAV_LOGO} alt="Logo" style={{ height: 40 }} />
+            RISHAV.DEV
+          </Box>
         </Typography>
         {isMobile ? (
           <IconButton color="black" edge="end" onClick={toggleDrawer(true)}>
