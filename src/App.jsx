@@ -1,3 +1,4 @@
+import { Element } from "react-scroll";
 import "./App.css";
 import About from "./component/About";
 import Contact from "./component/Contact";
@@ -11,14 +12,28 @@ import Projects from "./component/Projects";
 function App() {
   return (
     <>
-      <Header />
-      <MainContent />
-      <About />
-      <Experience />
-      <Education />
-      <Projects />
-      <Contact />
-      <Footer />
+      <Element name="mainContainer">
+        <Header />
+        <div id="home">
+          <MainContent />
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <div id="experience">
+          <Experience />
+        </div>
+        <div id="education">
+          <Education />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
+        <Footer />
+      </Element>
     </>
   );
 }

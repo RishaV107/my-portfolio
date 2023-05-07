@@ -39,7 +39,7 @@ const Contact = () => {
                 component="h4"
                 fontSize={{ xs: "1.8em", sm: "2em", md: "2.5em", xl: "2.5em" }}
               >
-                Dont be shy! Hit me up! 👇🏻
+                Don&apos;t be shy! Hit me up! 👇🏻
               </Typography>
             </Grid>
 

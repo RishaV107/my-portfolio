@@ -4,11 +4,9 @@ import {
   Toolbar,
   Typography,
   IconButton,
-  Button,
   Drawer,
   List,
   ListItem,
-  ListItemText,
   ListItemIcon,
   Box,
   useMediaQuery,
@@ -22,6 +20,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import CodeIcon from "@mui/icons-material/Code";
 import MailIcon from "@mui/icons-material/Mail";
 import RISHAV_LOGO from "../assets/svg/New-RS-LOGO.svg";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const theme = useTheme();
@@ -40,25 +39,45 @@ const Header = () => {
   };
 
   const navigationLinks = [
-    { text: "Home", icon: <HomeIcon />, href: "#" },
-    { text: "About Me", icon: <PersonIcon />, href: "#" },
-    { text: "Experience", icon: <WorkIcon />, href: "#" },
-    { text: "Education", icon: <SchoolIcon />, href: "#" },
-    { text: "Projects", icon: <CodeIcon />, href: "#" },
-    { text: "Contact", icon: <MailIcon />, href: "#" },
+    { text: "Home", icon: <HomeIcon />, href: "home" },
+    { text: "About Me", icon: <PersonIcon />, href: "about" },
+    { text: "Experience", icon: <WorkIcon />, href: "experience" },
+    { text: "Education", icon: <SchoolIcon />, href: "education" },
+    { text: "Projects", icon: <CodeIcon />, href: "projects" },
+    { text: "Contact", icon: <MailIcon />, href: "contact" },
   ];
 
   const renderDesktopNavLinks = () => (
     <Box sx={{ display: "flex" }}>
       {navigationLinks.map((link, index) => (
-        <Button
+        <Link
           key={index}
-          color="inherit"
-          href={link.href}
-          sx={{ ml: index !== 0 ? 2 : 0, color: "#000000" }} // Set color to black
+          to={link.href}
+          smooth={true}
+          duration={500}
+          sx={{ textDecoration: "none" }}
         >
-          {link.text}
-        </Button>
+          <Typography
+            variant="subtitle1"
+            component="span"
+            sx={{
+              color: "#000000",
+              cursor: "pointer",
+              marginRight: theme.spacing(3),
+              textDecoration: "none",
+              "&:hover": {
+                backgroundImage:
+                  "linear-gradient(to right, #434343 0%, black 100%)",
+
+                color: "#FFFFFF",
+                borderRadius: "5px",
+              },
+            }}
+            p={1}
+          >
+            {link.text}
+          </Typography>
+        </Link>
       ))}
     </Box>
   );
@@ -72,15 +91,30 @@ const Header = () => {
     >
       <List sx={{ width: 250 }}>
         {navigationLinks.map((link, index) => (
-          <ListItem
-            key={index}
-            button
-            component="a"
-            href={link.href}
-            onClick={toggleDrawer(false)}
-          >
+          <ListItem key={index} href={link.href} onClick={toggleDrawer(false)}>
             <ListItemIcon>{link.icon}</ListItemIcon>
-            <ListItemText primary={link.text} />
+            <Link
+              key={index}
+              to={link.href}
+              smooth={true}
+              duration={500}
+              sx={{ textDecoration: "none" }}
+            >
+              <Typography
+                variant="subtitle1"
+                component="span"
+                sx={{
+                  color: "#000000",
+                  cursor: "pointer",
+                  marginRight: theme.spacing(3),
+                  textDecoration: "none",
+                  "&:hover": {},
+                }}
+                onClick={toggleDrawer(false)}
+              >
+                {link.text}
+              </Typography>
+            </Link>
           </ListItem>
         ))}
       </List>
