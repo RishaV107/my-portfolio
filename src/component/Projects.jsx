@@ -143,6 +143,36 @@ const Projects = () => {
             </Grid>
           ))}
         </Grid>
+        <Grid item sx={12}>
+          <Link
+            href={"https://github.com/RishaV107"}
+            target="_blank"
+            sx={{ textDecoration: "none" }}
+          >
+            <Typography
+              variant="subtitle1"
+              component="span"
+              sx={{
+                color: "#000000",
+                cursor: "pointer",
+                backgroundColor: "#FFFFFF",
+                borderRadius: "5px",
+
+                textDecoration: "none",
+                "&:hover": {
+                  backgroundImage:
+                    "linear-gradient(to right, #434343 0%, black 100%)",
+
+                  color: "#FFFFFF",
+                  borderRadius: "5px",
+                },
+              }}
+              p={1}
+            >
+              {"Show More"}
+            </Typography>
+          </Link>
+        </Grid>
       </Grid>
     </Box>
   );
