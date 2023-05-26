@@ -5,6 +5,7 @@ import {
   Typography,
   IconButton,
   Drawer,
+  Link as RefLink,
   List,
   ListItem,
   ListItemIcon,
@@ -79,6 +80,36 @@ const Header = () => {
           </Typography>
         </Link>
       ))}
+      <RefLink
+        href="https://drive.google.com/file/d/1z4s2_-ckbB7atVTyBj852mlgAE-xL_wK/view?usp=share_link"
+        target="_blank"
+        sx={{ textDecoration: "none" }}
+      >
+        <Typography
+          variant="subtitle1"
+          component="span"
+          sx={{
+            color: "#FFFFFF",
+            cursor: "pointer",
+            marginRight: theme.spacing(3),
+            textDecoration: "none",
+            borderRadius: "5px",
+            backgroundImage:
+              "linear-gradient(to right, #434343 0%, black 100%)",
+            "&:hover": {
+              backgroundColor: "#8EC5FC",
+              backgroundImage:
+                "linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%)",
+
+              color: "#000000",
+              borderRadius: "5px",
+            },
+          }}
+          p={1}
+        >
+          Resume
+        </Typography>
+      </RefLink>
     </Box>
   );
 
