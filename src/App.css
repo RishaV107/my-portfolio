@@ -1,51 +1,98 @@
-.logo {
-  height: 6.5em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.html:hover {
-  filter: drop-shadow(0 0 2em #e44d26);
-}
-.logo.css:hover {
-  filter: drop-shadow(0 0 2em #264de4);
-}
-.logo.java-script:hover {
-  filter: drop-shadow(0 0 2em #f7df1e);
-}
-.logo.type-script.react:hover {
-  filter: drop-shadow(0 0 2em #de4313);
-}
-.logo.c:hover {
-  filter: drop-shadow(0 0 2em #de4313);
-}
-.logo.c-plus-plus:hover {
-  filter: drop-shadow(0 0 2em #de4313);
-}
-.logo.c-plus-plus:hover {
-  filter: drop-shadow(0 0 2em #0a95a4a3);
-}
-.logo.nodejs:hover {
-  filter: drop-shadow(0 0 2em #448a3f);
-}
-.logo.nestjs:hover {
-  filter: drop-shadow(0 0 2em #e0234e);
-}
-.logo.expressjs:hover {
-  filter: drop-shadow(0 0 2em hsla(226, 90%, 8%, 0.958));
-}
-.logo.type-script:hover {
-  filter: drop-shadow(0 0 2em hsla(225, 91%, 39%, 0.958));
+/* =============================================
+   Scroll Reveal Animations
+   ============================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-@media screen and (max-width: 480px) {
-  .logo {
-    height: 5em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================
+   Tech Stack Logo Effects
+   (--tech-logo-filter is injected via MUI theme)
+   ============================================= */
+.tech-logo {
+  height: 52px;
+  width: 52px;
+  object-fit: contain;
+  display: block;
+  padding: 0;
+  will-change: filter;
+  filter: var(--tech-logo-filter, grayscale(35%) opacity(0.65));
+  transition: filter 0.35s ease;
+}
+
+/* Double drop-shadow: outer glow + tight bright core for a vivid lamp-glow effect */
+.tech-logo.html:hover        { filter: drop-shadow(0 0 16px #e44d26) drop-shadow(0 0 5px #e44d26) opacity(1); }
+.tech-logo.css:hover         { filter: drop-shadow(0 0 16px #264de4) drop-shadow(0 0 5px #264de4) opacity(1); }
+.tech-logo.javascript:hover  { filter: drop-shadow(0 0 16px #f7df1e) drop-shadow(0 0 5px #f7df1e) opacity(1); }
+.tech-logo.typescript:hover  { filter: drop-shadow(0 0 16px #3178c6) drop-shadow(0 0 5px #3178c6) opacity(1); }
+.tech-logo.react:hover       { filter: drop-shadow(0 0 16px #61dafb) drop-shadow(0 0 5px #61dafb) opacity(1); }
+.tech-logo.nodejs:hover      { filter: drop-shadow(0 0 16px #68a063) drop-shadow(0 0 5px #68a063) opacity(1); }
+.tech-logo.nestjs:hover      { filter: drop-shadow(0 0 16px #e0234e) drop-shadow(0 0 5px #e0234e) opacity(1); }
+.tech-logo.mysql:hover       { filter: drop-shadow(0 0 16px #4479a1) drop-shadow(0 0 5px #4479a1) opacity(1); }
+
+@media (max-width: 600px) {
+  .tech-logo {
+    height: 42px;
+    width: 42px;
   }
+}
+
+/* =============================================
+   Gradient Text Utility
+   ============================================= */
+.gradient-text {
+  background: linear-gradient(135deg, #8178f8 0%, #00c8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* =============================================
+   Keyframe Animations
+   ============================================= */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(129, 120, 248, 0.45),
+      0 0 60px rgba(129, 120, 248, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 40px rgba(129, 120, 248, 0.75),
+      0 0 100px rgba(129, 120, 248, 0.25);
+  }
+}
+
+.float-animation {
+  animation: float 5s ease-in-out infinite;
+}
+
+.glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* =============================================
+   Dot-grid texture
+   (--dot-grid-color is injected via MUI theme)
+   ============================================= */
+.section-dot-grid {
+  background-image: radial-gradient(
+    circle,
+    var(--dot-grid-color, rgba(255, 255, 255, 0.04)) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
 }
